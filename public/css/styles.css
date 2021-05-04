@@ -36,13 +36,14 @@ p{
 
 header {
     background-color: #EAC926;
-    padding: 15px;    
+    padding: 10px;    
 }
 
-header .logo-y-barra{
+header .main-header{
     display: flex;
-    justify-content: space-between;
+    flex-wrap:wrap;
     align-items: center;
+    justify-content: space-between;
 }
 
 header .logo{
@@ -52,7 +53,8 @@ header .logo{
 header .formulario{    
     display:flex;    
     padding-left:5px;
-    height: 20px;             
+    height: 20px; 
+    width:50%               
 }
 
 header .formulario input{
@@ -61,7 +63,8 @@ header .formulario input{
     outline: none;
     color: #666;
     padding: 3px; 
-    font-size: 10px;      
+    font-size: 10px; 
+    width: 90%;     
 }
 
 header .formulario .submit{
@@ -69,6 +72,13 @@ header .formulario .submit{
     border: 1px solid #666;
     color: #666;
     width: 20px;
+}
+
+header .compra-cuotas{
+    text-align: center;
+    font-size: 12px;
+    margin: 10px;
+    padding-left: 15px;
 }
 
 header nav{
@@ -84,12 +94,6 @@ header ul {
 header ul a{
     text-decoration: none;
     color:black;
-}
-
-.compra-cuotas{
-    text-align: center;
-    font-size: 12px;
-    margin: 10px;
 }
 
 .burger-menu{
@@ -187,7 +191,6 @@ main section article .descuento{
 }
 
 
-
 /* Footer */
 
 footer{
@@ -228,6 +231,7 @@ footer ul li{
     padding: 10px;
     margin-top:20px;    
 }
+
 
 /* Register */
 
@@ -344,18 +348,26 @@ footer ul li{
         display:block;
     }
 
+    header .main-header{
+        display: flex;
+        flex-wrap:nowrap;
+        align-items: center;
+        margin-bottom: 10px;    
+    }
+
+    header .formulario{
+        width:30%;
+    }
+
+    header .logo,
+    .formulario, .compra-cuotas{
+        width: 30%;
+    }
+
     header .logo{
         margin: 0;
     }
-
-    header .logo-y-barra{
-        flex-wrap: nowrap;
-        width: 75%;      
-        justify-content: space-around;
-        align-items: center;
-        margin: 0;
-    }
-
+    
     header .formulario{
         height: 30px;
         padding: 0;                       
@@ -365,15 +377,10 @@ footer ul li{
         font-size: 14px;             
     }
 
-    header .main-header{
-        display: flex;
-        align-items: center;
-        margin-bottom: 10px;    
-    }
-
     header .compra-cuotas{
         margin: 0;
         font-size: 14px;
+        padding-left: 0;
     }
     
     .main-navbar{
@@ -449,6 +456,5 @@ footer ul li{
     footer section i{
         transition: all 450ms;
     }
-
    
 }
