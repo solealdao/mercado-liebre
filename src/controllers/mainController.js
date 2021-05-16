@@ -2,13 +2,13 @@ const path = require('path');
 
 const controlador ={
     home: function(req, res){
-        res.sendFile(path.resolve(__dirname, '../views/home.html'))
+        res.render(path.resolve(__dirname, '../views/home.ejs'))
     },
     registrar: function(req, res){
-        res.sendFile(path.resolve(__dirname, '../views/register.html'))
+        res.render(path.resolve(__dirname, '../views/register.ejs'))
     },
     login: function(req, res){
-        res.sendFile(path.resolve(__dirname, '../views/login.html'))
+        res.render(path.resolve(__dirname, '../views/login.ejs'))
     },
 };
 

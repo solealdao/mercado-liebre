@@ -2,10 +2,10 @@ const express = require ('express');
 const app = express();
 const path = require('path');
 
-let rutasMain = require('./src/routes/main.js');
+let rutasMain = require('./routes/main.js');
 
 //Configuración recursos estáticos
-const pathPublic = path.resolve(__dirname, './public');
+const pathPublic = path.resolve(__dirname, '../public');
 app.use(express.static(pathPublic));
 
 //Configuración rutas
